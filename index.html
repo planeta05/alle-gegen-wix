@@ -52,10 +52,7 @@
             <img class="people" src="./images/people.png">
         </div>
 </main>
-<audio autoplay="true" src="./images/intro.mp3" loop>
-  <source  type="audio/mp3">
-  Your browser does not support the audio element.
-</audio>
+<audio id="audio" src="./images/intro.mp3"/>
 
     <script src="JavaScript/bundle.js"></script>
     <script data-swup-reload-script src="JavaScript/app.js"></script>
@@ -99,4 +96,9 @@
                 //seconds
             }, 0)
 }());
+
+document.body.addEventListener('touchstart', function() {
+    const audio = document.getElementById('audio');
+    audio.play();
+})
 </script>
